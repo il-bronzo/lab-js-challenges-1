@@ -52,7 +52,13 @@ return array;
 // Iteration 3 | Multiply for Each
 const numbers = [1, 2, 5, 10, 13, 50];
 
-function multiplyBy() {}
+function multiplyBy(numbers, multiplier) {
+let result = []
+  numbers.forEach(function(ditto){
+result.push(ditto * multiplier)}
+  )
+  return result
+}
 
 
 
