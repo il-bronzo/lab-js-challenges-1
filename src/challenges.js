@@ -28,8 +28,24 @@ return count;
 
 
 // Iteration 2 | Number Sequence
-function createSequence() {}
+function createSequence(n) {
+/*let array = [];
+if (n !== 0) {
+for (let i = 0; i < n; i++){
+  array.push(i);}
+}
+return array;
+}*/
 
+  let array = [0];
+  if (n === 0) {
+    array= [] }
+    else {
+      for (let i = 1; i <= n; i++){
+    array.push(i);}
+    }
+    return array;
+  }
 
 
 
