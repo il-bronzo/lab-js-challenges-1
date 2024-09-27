@@ -64,12 +64,28 @@ result.push(ditto * multiplier)}
 
 
 // Iteration 4 | Filter Out
-const original = ["cat", "dog", "fish", "bird", "cat", "fish"];
+
+
+
+
+function filterOut(original, toRemove) {
+  if(original.length === 0) {
+      return null;
+  }
+  for (let i = 0; i < original.length; i++) {
+    if (toRemove.includes(original[i])) {
+      original.splice(i, 1);
+      i--; // Disminuir el contador para compensar la eliminación del elemento
+    }
+  }
+  return original;
+}
+
+const original = [];
 const toRemove = ["cat", "dog"];
 
-function filterOut() {}
-
-
+const filteredArray = filterOut(original, toRemove);
+console.log(filteredArray); // Output: null
 
 
 // Iteration 5 | Unique Arrays
