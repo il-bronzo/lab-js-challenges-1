@@ -1,4 +1,4 @@
-// Iteration 1 | Count Repetition
+// Iteration 1 | Count Repetition 
 const repeatedWords = [
   "machine",
   "matter",
@@ -103,7 +103,20 @@ const duplicateWords = [
   "bring"
 ];
 
-function uniquifyArray() {}
+function uniquifyArray(listOfWords) {
+  let noDoubles = [];
+  if (listOfWords.length===0) {
+    return null;
+  }
+  listOfWords.forEach(function(word) {
+    
+    if (noDoubles.includes(word)) { 
+      return;
+    }
+    noDoubles.push(word);
+  });
+  return noDoubles;
+};
 
 
 
