@@ -145,4 +145,37 @@ const matrix = [
   [1, 70, 54, 71, 83, 51, 54, 69, 16, 92, 33, 48, 61, 43, 52, 1, 89, 19, 67, 48]
 ];
 
-function greatestProduct() {}
+function greatestProduct(matrix) {
+  let multiply = 1;
+  let multiplyFourNumber = 1;
+  
+   matrix.forEach(function(row) {
+    row.forEach(function(number) {
+      let indexNumber = row.indexOf(number);
+     
+      
+      if (indexNumber<= row.length-4) {
+        multiplyFourNumber = number*(row[indexNumber + 1])*(row[indexNumber + 2])*(row[indexNumber + 3])}
+      if (multiplyFourNumber >= multiply) {
+        multiply = multiplyFourNumber;
+      }
+    
+    });
+ });
+ 
+ 
+   matrix.forEach(function(row) {
+    row.forEach(function(number) {
+      let indexNumber = row.indexOf(number);
+     let indexRow= matrix.indexOf(row);
+      
+      if (indexRow<= matrix.length-4) {
+        multiplyFourNumber = number*(matrix[indexRow + 1][indexNumber])*(matrix[indexRow + 2][indexNumber])*(matrix[indexRow + 3][indexNumber])}
+      if (multiplyFourNumber >= multiply) {
+        multiply = multiplyFourNumber;
+      }
+  
+   });
+  });
+   return multiply;
+};
